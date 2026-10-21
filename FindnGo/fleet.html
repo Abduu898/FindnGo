@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse verified rental cars across Morocco with FindnGo." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mvp.css" />
+    <title>Our fleet | FindnGo</title>
+  </head>
+  <body class="app-page">
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a class="app-logo" href="index.html">FindnGo</a>
+        <nav class="app-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="fleet.html" aria-current="page">Our fleet</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="app-header__action" href="booking.html">Book a car <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </header>
+    <main class="mvp-main">
+      <div class="mvp-hero">
+        <div><p class="mvp-kicker">The FindnGo fleet</p><h1>Find your fit.</h1></div>
+        <p>Small city runabout, family SUV, or something with a little more presence. Every car is listed by a verified local partner.</p>
+      </div>
+      <div class="mvp-toolbar">
+        <span id="fleet-count" class="mvp-kicker">5 cars available</span>
+        <label>Show me <select id="fleet-filter" aria-label="Filter cars by type"><option value="all">All vehicles</option><option value="city">City cars</option><option value="suv">SUVs</option><option value="van">Vans</option><option value="premium">Premium cars</option></select></label>
+      </div>
+      <section id="fleet-grid" class="mvp-car-grid" aria-live="polite"></section>
+    </main>
+    <script src="mvp.js"></script>
+  </body>
+</html>

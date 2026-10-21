@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Request a rental car from FindnGo." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mvp.css" />
+    <title>Book your ride | FindnGo</title>
+  </head>
+  <body class="app-page">
+    <header class="app-header">
+      <div class="app-header__inner">
+        <a class="app-logo" href="index.html">FindnGo</a>
+        <nav class="app-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="fleet.html">Our fleet</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="app-header__action" href="fleet.html"><i class="ri-arrow-left-line"></i> Change car</a>
+      </div>
+    </header>
+    <main class="mvp-main">
+      <div class="mvp-booking-layout">
+        <aside class="mvp-booking-aside">
+          <div><span class="mvp-booking-aside__mark">✳</span><p class="mvp-kicker">A better way to move</p><h1>Let's make it official.</h1><p>This is a front-end reservation request for the MVP. Your details stay in this browser and no payment is taken.</p></div>
+          <p><i class="ri-shield-check-line"></i> Verified local partners · Human confirmation</p>
+        </aside>
+        <section class="mvp-booking-panel">
+          <p class="mvp-kicker">Reserve your ride</p>
+          <h2>Tell us about your trip.</h2>
+          <div id="booking-vehicle" class="mvp-booking-vehicle"></div>
+          <form id="mvp-booking-form">
+            <input id="selected-car" type="hidden" name="car" />
+            <div class="mvp-form-grid">
+              <div class="mvp-field mvp-field--full"><label for="mvp-location">Pick-up city</label><input id="mvp-location" name="location" type="text" placeholder="Casablanca" required /></div>
+              <div class="mvp-field"><label for="mvp-start">Pick-up date</label><input id="mvp-start" name="start" type="date" required /></div>
+              <div class="mvp-field"><label for="mvp-end">Return date</label><input id="mvp-end" name="end" type="date" required /></div>
+              <div class="mvp-field"><label for="mvp-name">Your name</label><input id="mvp-name" name="name" type="text" placeholder="First and last name" required /></div>
+              <div class="mvp-field"><label for="mvp-phone">Phone number</label><input id="mvp-phone" name="phone" type="tel" placeholder="+212 6 00 00 00 00" required /></div>
+            </div>
+            <div class="mvp-booking-total"><span>Estimated daily rate</span><strong id="booking-total"></strong></div>
+            <button class="btn mvp-submit" type="submit">Request this car <i class="ri-arrow-right-line"></i></button>
+          </form>
+          <div id="booking-confirmation" class="mvp-confirmation" hidden><strong>Request received.</strong> We will confirm your <span id="booking-confirmation-car"></span> shortly. This mock confirmation is ready for a real API later.</div>
+        </section>
+      </div>
+    </main>
+    <script src="mvp.js"></script>
+  </body>
+</html>

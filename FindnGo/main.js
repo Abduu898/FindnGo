@@ -145,6 +145,12 @@ document.querySelectorAll("[data-scroll-to]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-page]").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = button.dataset.page;
+  });
+});
+
 const carNames = ["Urban Cruiser", "Atlas Explorer", "Coast Runner", "Grand Tourer", "Desert Line"];
 const bookingModal = document.getElementById("booking-modal");
 const bookingCar = document.getElementById("booking-car");
