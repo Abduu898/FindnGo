@@ -177,11 +177,10 @@ document.addEventListener("keydown", (event) => {
 document.querySelectorAll("[data-filter]").forEach((filterLink) => {
   filterLink.addEventListener("click", (event) => {
     event.preventDefault();
-    const firstMatch = Array.from(document.querySelectorAll(".swiper-slide")).findIndex(
-      (slide) => slide.dataset.type === filterLink.dataset.filter,
-    );
-    if (firstMatch >= 0) {
-      swiper.slideToLoop(firstMatch);
+    const filterIndex = { city: 0, suv: 1, van: 2, premium: 3 };
+    const targetIndex = filterIndex[filterLink.dataset.filter];
+    if (targetIndex !== undefined) {
+      swiper.slideToLoop(targetIndex);
     }
     document.querySelector("#ride").scrollIntoView({ behavior: "smooth" });
     showToast(`Showing our ${filterLink.dataset.filter} collection.`);
