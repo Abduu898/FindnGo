@@ -129,6 +129,12 @@ reveal?.reveal(".download__links", {
 
 document.querySelector(".search__form").addEventListener("submit", (event) => {
   event.preventDefault();
+  const startDate = document.getElementById("start").value;
+  const endDate = document.getElementById("stop").value;
+  if (startDate && endDate && endDate < startDate) {
+    showToast("Return date must be after pick-up date.");
+    return;
+  }
   document.querySelector("#ride").scrollIntoView({ behavior: "smooth" });
   showToast("Here are the cars available for your trip.");
 });
@@ -163,9 +169,24 @@ document.querySelectorAll("[data-close-modal]").forEach((element) => {
 
 document.querySelector(".booking__form").addEventListener("submit", (event) => {
   event.preventDefault();
+  const startDate = document.getElementById("booking-start").value;
+  const endDate = document.getElementById("booking-end").value;
+  if (endDate < startDate) {
+    showToast("Return date must be after pick-up date.");
+    return;
+  }
   closeBooking();
   event.currentTarget.reset();
   showToast("Request received. We'll be in touch shortly.");
+});
+
+const today = new Date().toISOString().split("T")[0];
+document.querySelectorAll('input[type="date"]').forEach((input) => {
+  input.min = today;
+});
+
+document.getElementById("booking-start").addEventListener("change", (event) => {
+  document.getElementById("booking-end").min = event.target.value || today;
 });
 
 document.addEventListener("keydown", (event) => {

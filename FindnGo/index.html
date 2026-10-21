@@ -286,6 +286,51 @@
       </form>
     </section>
 
+    <section class="section__container steps__container" id="how-it-works">
+      <div class="steps__intro">
+        <p class="section__eyebrow">Simple by design</p>
+        <h2 class="section__header">From “where?” to “let's go.”</h2>
+        <p>Everything you need for a smoother rental, in three easy moves.</p>
+      </div>
+      <div class="steps__grid">
+        <article class="step__card">
+          <span class="step__number">01</span>
+          <i class="ri-map-pin-line"></i>
+          <h3>Choose a place</h3>
+          <p>Tell us where you are headed and when you need the keys.</p>
+        </article>
+        <article class="step__card step__card--accent">
+          <span class="step__number">02</span>
+          <i class="ri-route-line"></i>
+          <h3>Pick your match</h3>
+          <p>Compare trusted local cars by style, price, and availability.</p>
+        </article>
+        <article class="step__card">
+          <span class="step__number">03</span>
+          <i class="ri-key-2-line"></i>
+          <h3>Hit the road</h3>
+          <p>Confirm with a human, collect your car, and enjoy the drive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stories__container">
+      <div class="section__container stories__inner">
+        <div class="stories__heading">
+          <p class="section__eyebrow">Good company</p>
+          <h2 class="section__header">Loved by people who keep moving.</h2>
+        </div>
+        <div class="testimonial__card">
+          <div class="testimonial__rating" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>“The easiest car rental I have ever used in Morocco. The car was spotless, the handoff was quick, and I could spend my time exploring instead of sorting logistics.”</blockquote>
+          <div class="testimonial__person">
+            <span>NB</span>
+            <div><strong>Nadia B.</strong><small>Weekend in Marrakech</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
    <!--<section class="section__container story__container">
       <h2 class="section__header">STORIES BEHIND THE WHEEL</h2>
       <div class="story__grid">
@@ -337,6 +382,27 @@
       </div>
     </section>
 -->
+    <section class="section__container faq__container">
+      <div class="faq__heading">
+        <p class="section__eyebrow">Need to know</p>
+        <h2 class="section__header">Questions, answered.</h2>
+      </div>
+      <div class="faq__list">
+        <details open>
+          <summary>What do I need to rent a car?</summary>
+          <p>Bring a valid driving license, a form of ID, and the booking details we confirm with you. Our partner may request a security deposit.</p>
+        </details>
+        <details>
+          <summary>Can I pick up in one city and return in another?</summary>
+          <p>Yes. One-way trips are available with selected partners. Add your route in the request and we will confirm the options and any fee.</p>
+        </details>
+        <details>
+          <summary>Are the cars inspected?</summary>
+          <p>Every listed vehicle comes from a verified local partner and is checked before handoff. We make the car condition clear before you commit.</p>
+        </details>
+      </div>
+    </section>
+
     <section class="banner__container">
       <div class="banner__wrapper">
         <img src="assets/banner-1.png" alt="banner" />
@@ -445,6 +511,18 @@
             <strong id="booking-price">225 DH / day</strong>
           </div>
           <div class="booking__fields">
+            <div class="input__group">
+              <label for="booking-location">Pick-up city</label>
+              <input id="booking-location" name="location" type="text" placeholder="Casablanca" required />
+            </div>
+            <div class="input__group">
+              <label for="booking-start">Pick-up date</label>
+              <input id="booking-start" name="start" type="date" required />
+            </div>
+            <div class="input__group">
+              <label for="booking-end">Return date</label>
+              <input id="booking-end" name="end" type="date" required />
+            </div>
             <div class="input__group">
               <label for="booking-name">Your name</label>
               <input id="booking-name" name="name" type="text" placeholder="First and last name" required />
