@@ -12,7 +12,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>FindnGo || Your best car renting solution</title>
+    <meta name="description" content="FindnGo makes it easy to find and book trusted rental cars across Morocco." />
+    <title>FindnGo | Move your way</title>
   </head>
   <body>
     <header>
@@ -27,48 +28,56 @@
         </div>
         <ul class="nav__links" id="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#rent">Rent</a></li>
-          <li><a href="#ride">Ride</a></li>
+          <li><a href="#rent">How it works</a></li>
+          <li><a href="#ride">Our fleet</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav__btn">
-          <button class="btn">Get Started</button>
+          <button class="btn" type="button" data-scroll-to="#ride">Get started <i class="ri-arrow-right-line"></i></button>
         </div>
       </nav>
       <div class="header__container" id="home">
-        <h1>Find Your Ride</h1>
-        <form action="/">
+        <p class="hero__eyebrow"><span></span> Your next trip starts here</p>
+        <h1>Move your way.</h1>
+        <p class="hero__lead">Reliable cars from local partners, ready when you are.</p>
+        <form class="search__form" action="#ride">
           <div class="input__group">
-            <label for="location">Pick up & Return location</label>
+            <label for="location">Pick-up location</label>
             <input
               type="text"
               name="location"
               id="location"
-              placeholder="Dallas, Texas"
+              placeholder="Casablanca, Morocco"
             />
           </div>
           <div class="input__group">
-            <label for="start">Start</label>
+            <label for="start">Pick-up date</label>
             <input
-              type="text"
+              type="date"
               name="start"
               id="start"
-              placeholder="Aug 16, 10:00 AM"
+              aria-label="Pick-up date"
             />
           </div>
           <div class="input__group">
-            <label for="stop">Stop</label>
+            <label for="stop">Return date</label>
             <input
-              type="text"
+              type="date"
               name="stop"
               id="stop"
-              placeholder="Aug 18, 10:00 PM"
+              aria-label="Return date"
             />
           </div>
-          <button class="btn">
+          <button class="btn" type="submit">
             <i class="ri-search-line"></i>
+            <span>Find a car</span>
           </button>
         </form>
+        <div class="hero__proof" aria-label="FindnGo benefits">
+          <span><i class="ri-shield-check-line"></i> Verified partners</span>
+          <span><i class="ri-map-pin-2-line"></i> 12 cities covered</span>
+          <span><i class="ri-customer-service-2-line"></i> Human support</span>
+        </div>
         <img src="assets/header.png" alt="header" />
       </div>
       <a href="#about" class="scroll__down">
@@ -77,34 +86,37 @@
     </header>
 
     <section class="section__container range__container" id="about">
-      <h2 class="section__header">WIDE RANGE OF VEHICLES</h2>
+      <div class="section__intro">
+        <p class="section__eyebrow">Find your fit</p>
+        <h2 class="section__header">A car for every kind of day.</h2>
+      </div>
       <div class="range__grid">
         <div class="range__card">
           <img src="assets/range-1.jpg" alt="range" />
           <div class="range__details">
-            <h4>CARS</h4>
-            <a href="#"><i class="ri-arrow-right-line"></i></a>
+            <h4>City cars</h4>
+            <a href="#ride" data-filter="city" aria-label="Browse city cars"><i class="ri-arrow-right-line"></i></a>
           </div>
         </div>
         <div class="range__card">
           <img src="assets/range-2.jpg" alt="range" />
           <div class="range__details">
-            <h4>SUVS</h4>
-            <a href="#"><i class="ri-arrow-right-line"></i></a>
+            <h4>SUVs</h4>
+            <a href="#ride" data-filter="suv" aria-label="Browse SUVs"><i class="ri-arrow-right-line"></i></a>
           </div>
         </div>
         <div class="range__card">
           <img src="assets/range-3.jpg" alt="range" />
           <div class="range__details">
-            <h4>VANS</h4>
-            <a href="#"><i class="ri-arrow-right-line"></i></a>
+            <h4>Vans</h4>
+            <a href="#ride" data-filter="van" aria-label="Browse vans"><i class="ri-arrow-right-line"></i></a>
           </div>
         </div>
         <div class="range__card">
           <img src="assets/range-4.jpg" alt="range" />
           <div class="range__details">
-            <h4>Others</h4>
-            <a href="#"><i class="ri-arrow-right-line"></i></a>
+            <h4>Premium</h4>
+            <a href="#ride" data-filter="premium" aria-label="Browse premium cars"><i class="ri-arrow-right-line"></i></a>
           </div>
         </div>
       </div>
@@ -115,28 +127,31 @@
         <img src="assets/location.png" alt="location" />
       </div>
       <div class="location__content">
-        <h2 class="section__header">FIND CAR IN YOUR LOCATIONS</h2>
+        <p class="section__eyebrow">Made local</p>
+        <h2 class="section__header">The right car is closer than you think.</h2>
         <p>
-         Find the perfect car, wherever you are in Morocco.
-Whether you’re in Casablanca, Marrakech, Tangier or anywhere else, our "Find a Car Near You" tool helps you browse and book trusted vehicles nearby — fast and easy.
-Looking for a small city car, a comfy SUV for the family, or a premium ride for your weekend trip? We’ve got you covered. Just enter your location and choose from verified offers by local rental agencies.
+          Find the perfect car wherever you are in Morocco. Browse trusted vehicles from local rental agencies in Casablanca, Marrakech, Tangier, and beyond. Choose a city car, a comfortable SUV, or a premium ride for the weekend, then get moving.
         </p>
         <div class="location__btn">
-          <button class="btn">Find a Location</button>
+          <button class="btn" type="button" data-scroll-to="#home">Find a location <i class="ri-arrow-right-up-line"></i></button>
         </div>
       </div>
     </section>
 
     <section class="select__container" id="ride">
-      <h2 class="section__header">PICK YOUR DREAM CAR TODAY</h2>
+      <p class="section__eyebrow">Your shortlist</p>
+      <h2 class="section__header">Meet your next ride.</h2>
       <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-type="city">
             <div class="select__card">
+              <div class="select__card__label">Most popular</div>
               <img src="assets/select-1.png" alt="select" />
+              <h3>Urban Cruiser</h3>
+              <p class="select__card__meta">Automatic · Petrol · Casablanca</p>
               <div class="select__info">
                 <div class="select__info__card">
                   <span><i class="ri-speed-up-line"></i></span>
@@ -157,9 +172,12 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-type="suv">
             <div class="select__card">
+              <div class="select__card__label">Family favourite</div>
               <img src="assets/select-2.png" alt="select" />
+              <h3>Atlas Explorer</h3>
+              <p class="select__card__meta">Automatic · Hybrid · Marrakech</p>
               <div class="select__info">
                 <div class="select__info__card">
                   <span><i class="ri-speed-up-line"></i></span>
@@ -179,9 +197,12 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-type="van">
             <div class="select__card">
+              <div class="select__card__label">Weekend ready</div>
               <img src="assets/select-3.png" alt="select" />
+              <h3>Coast Runner</h3>
+              <p class="select__card__meta">Automatic · Petrol · Agadir</p>
               <div class="select__info">
                 <div class="select__info__card">
                   <span><i class="ri-speed-up-line"></i></span>
@@ -201,9 +222,12 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-type="premium">
             <div class="select__card">
+              <div class="select__card__label">Executive</div>
               <img src="assets/select-4.png" alt="select" />
+              <h3>Grand Tourer</h3>
+              <p class="select__card__meta">Automatic · Petrol · Rabat</p>
               <div class="select__info">
                 <div class="select__info__card">
                   <span><i class="ri-speed-up-line"></i></span>
@@ -223,9 +247,12 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide" data-type="suv">
             <div class="select__card">
+              <div class="select__card__label">Room to roam</div>
               <img src="assets/select-5.png" alt="select" />
+              <h3>Desert Line</h3>
+              <p class="select__card__meta">Automatic · Diesel · Ouarzazate</p>
               <div class="select__info">
                 <div class="select__info__card">
                   <span><i class="ri-speed-up-line"></i></span>
@@ -250,11 +277,11 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
       <form action="/" class="select__form">
         <div class="select__price">
           <span><i class="ri-price-tag-3-line"></i></span>
-          <div><span id="select-price">2250 DH</span> /day</div>
+          <div><span id="select-price">225 DH</span> /day</div>
         </div>
         <div class="select__btns">
-          <button class="btn">View Details</button>
-          <button class="btn">Rent Now</button>
+          <button class="btn" type="button" data-action="details">View details</button>
+          <button class="btn" type="button" data-action="rent">Rent now</button>
         </div>
       </form>
     </section>
@@ -328,7 +355,8 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
     <section class="download">
       <div class="section__container download__container">
         <div class="download__content">
-          <h2 class="section__header">FindnGo</h2>
+          <p class="section__eyebrow">Take us with you</p>
+          <h2 class="section__header">Your plans. Our wheels.</h2>
           <div class="download__links">
             <a href="#">
               <img src="assets/apple.png" alt="apple" />
@@ -346,10 +374,11 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
 
     <section class="news" id="contact">
       <div class="section__container news__container">
-        <h2 class="section__header">Stay up to date on all the latest news.</h2>
-        <form action="/">
-          <input type="text" placeholder="Your email" />
-          <button class="btn">
+        <h2 class="section__header">Get first access to better drives.</h2>
+        <form class="newsletter__form" action="#contact">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" placeholder="Your email address" required />
+          <button class="btn" type="submit">
             <i class="ri-send-plane-fill"></i>
           </button>
         </form>
@@ -397,6 +426,38 @@ Looking for a small city car, a comfy SUV for the family, or a premium ride for 
         Copyright © 2025 FindnGo. All rights reserved.
       </div>
     </footer>
+
+    <div class="modal" id="booking-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" aria-label="Close booking dialog" data-close-modal>
+          <i class="ri-close-line"></i>
+        </button>
+        <p class="section__eyebrow">Reserve your ride</p>
+        <h2 id="modal-title">You're almost moving.</h2>
+        <p class="modal__summary">Complete your details and a FindnGo specialist will confirm your car.</p>
+        <form class="booking__form">
+          <div class="booking__selected">
+            <div>
+              <span>Selected vehicle</span>
+              <strong id="booking-car">Urban Cruiser</strong>
+            </div>
+            <strong id="booking-price">225 DH / day</strong>
+          </div>
+          <div class="booking__fields">
+            <div class="input__group">
+              <label for="booking-name">Your name</label>
+              <input id="booking-name" name="name" type="text" placeholder="First and last name" required />
+            </div>
+            <div class="input__group">
+              <label for="booking-phone">Phone number</label>
+              <input id="booking-phone" name="phone" type="tel" placeholder="+212 6 00 00 00 00" required />
+            </div>
+          </div>
+          <button class="btn" type="submit">Request this car <i class="ri-arrow-right-line"></i></button>
+        </form>
+      </section>
+    </div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
